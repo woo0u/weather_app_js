@@ -177,10 +177,202 @@ body {
 
 /*-----------------------------------*\
   #MATERIAL ICON
- \*-----------------------------------*/
+ \*----------------------------------*/
 @font-face {
   font-family: 'Material Symbols Rounded';
   font-style: normal;
   font-weight: 400;
   src: url(../font/material-symbol-rounded.woff2) format('woff2');
+}
+
+/*-----------------------------------*\
+  #COMMON ELEMENT
+ \*----------------------------------*/
+
+.container {
+  width: 100%;
+  max-width: 780px;
+  padding: 1rem;
+  margin: auto;
+  border-left: 1px solid var(--outline);
+  border-right: 1px solid var(--outline);
+}
+
+.m-icon {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga'; /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings */
+  -webkit-font-smoothing: antialiased;
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+  padding: 16px;
+}
+
+.icon-btn {
+  background-color: var(--white-alpha-8);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+}
+
+.has-state {
+  position: relative;
+}
+
+.has-state:hover {
+  box-shadow: var(--shadow-1);
+}
+
+.has-state:is(:focus, :focus-visible) {
+  box-shadow: none;
+}
+
+.has-state::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  clip-path: circle(100% at 50% 50%);
+  transition: var(--transition-short);
+}
+
+.has-state:hover::before {
+  background-color: var(--white-alpha-4);
+}
+
+.has-state:is(:focus, :focus-visible)::before {
+  background-color: var(--white-alpha-8);
+  animation: ripple 0.25s ease forwards;
+}
+
+@keyframes ripple {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  height: 48px;
+  line-height: 48px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  padding-inline: 16px; /* inline : 좌우 , block : 위아래 */
+  border-radius: var(--radius-pill);
+  gap: 0.5rem;
+}
+
+.btn-primary .span {
+  font-weight: var(--weight-semiBold);
+}
+
+.btn-primary[disabled] {
+  background-color: var(--outline);
+  color: var(--on-surface-variant);
+  cursor: not-allowed;
+}
+
+.btn-primary[disabled]::before {
+  display: none;
+}
+
+.card {
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+.card-lg {
+  border-radius: var(--radius-8);
+  padding: 20px;
+}
+
+.card-sm {
+  border-radius: var(--radius-4);
+  padding: 16px;
+}
+
+.heading {
+  color: var(--white);
+  font-size: var(--heading);
+  line-height: 1.1;
+}
+
+.title-1 {
+  font-size: var(--title-1);
+}
+
+.title-2 {
+  font-size: var(--title-2);
+  margin-block-end: 12px;
+}
+
+.title-3 {
+  font-size: var(--title-3);
+  font-weight: var(--weight-semiBold);
+}
+
+.body-1 {
+  font-size: var(--body-1);
+}
+
+.body-2 {
+  font-size: var(--body-2);
+  font-weight: var(--weight-semiBold);
+}
+
+.body-3 {
+  font-size: var(--body-3);
+}
+
+.label-1 {
+  font-size: var(--label-1);
+}
+
+.label-2 {
+  font-size: var(--label-2);
+}
+
+/*-----------------------------------*\
+  #HEADER
+ \*----------------------------------*/
+.search-view {
+  display: none;
+}
+
+.header .btn-primary {
+  padding-inline: 12px;
+}
+
+.header .container,
+.header .container .header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 150px;
 }
