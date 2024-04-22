@@ -1,43 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
 
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- Favicon Link -->
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
 
-    <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 
-    <!-- Main CSS File Link -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- header -->
-    <header class="header">
-      <div class="container">
-        <a href="#" class="logo">
-          <img src="images/logo.png" alt="logo" />
+  <!-- Main CSS File Link -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="logo">
+      </a>
+
+      <div class="search-view">
+        <div class="search-wrapper">
+          <input type="search" name="search" placeholder="도시명 검색..." class="search-field">
+
+          <span class="m-icon">search</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-btn has-state">
+          <span class="m-icon icon">search</span>
+        </button>
+
+        <a href="#" class="btn-primary has-state">
+          <span class="m-icon">my_location</span>
         </a>
+      </div>
+    </div>
+  </header>
 
-        <div class="search-view">
-        </div>
+  <!-- Main Grid Elements -->
+  <main>
+    <article class="container">
+      <div class="content-left">
+        <!-- Current Weather Box -->
+        <section class="section current-weather">
+          <div class="card card-lg current-weather-card">
+            <h2 class="title-2 card-title">Now</h2>
+            <div class="wrapper">
+              <p class="heading">
+                25&deg;<sup>c</sup>
+                <!-- escape string referrence : http://kor.pe.kr/util/4/charmap2.htm -->
+              </p>
+              <img src="images/weather_icons/01d.png" alt="Overcast Clouds" class="weather-icon">
+            </div>
 
-          <div class="header-actions">
-            <button class="icon-btn has-state">
-              <span class="m-icon icon">search</span>
-            </button>
-            
-            <a href="#" class="btn-primary has-state">
-              <span class="m-icon">my_location</span>
-            </a>
+            <p class="body-3">Overcast Clouds</p>
+            <ul class="meta-list">
+              <li class="meta-item">
+                <span class="m-icon">Calendar_today</span>
+                <p class="title-3 meta-text">Thursday 16, Feb</p>
+              </li>
+              <li class="meta-item">
+                <span class="m-icon">location_on</span>
+                <p class="title-3 meta-text">London, GB</p>
+              </li>
+            </ul>
           </div>
-        </div>
-  </body>
+        </section>
+
+        <!-- Forecast Box -->
+        <section class="section forecast">
+          <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
+          <div class="card card-lg forecast-card">
+            <ul>
+              <li class="card-item">
+                <div class="icon-wrapper">
+                  <img src="images/weather_icons/01n.png" alt="Overcast clouds" class="weather-icon">
+
+                  <span class="span">
+                    <p class="title-2">25</p>
+                  </span>
+                </div>
+
+                <p class="label-1">17 Feb</p>
+                <p class="label-1">Friday</p>
+              </li>
+              <li class="card-item">
+                <div class="icon-wrapper">
+                  <img src="images/weather_icons/01n.png" alt="Overcast clouds" class="weather-icon">
+
+                  <span class="span">
+                    <p class="title-2">25</p>
+                  </span>
+                </div>
+
+                <p class="label-1">17 Feb</p>
+                <p class="label-1">Friday</p>
+              </li>
+              <li class="card-item">
+                <div class="icon-wrapper">
+                  <img src="images/weather_icons/01n.png" alt="Overcast clouds" class="weather-icon">
+
+                  <span class="span">
+                    <p class="title-2">25</p>
+                  </span>
+                </div>
+
+                <p class="label-1">17 Feb</p>
+                <p class="label-1">Friday</p>
+              </li>
+              <li class="card-item">
+                <div class="icon-wrapper">
+                  <img src="images/weather_icons/01n.png" alt="Overcast clouds" class="weather-icon">
+
+                  <span class="span">
+                    <p class="title-2">25</p>
+                  </span>
+                </div>
+
+                <p class="label-1">17 Feb</p>
+                <p class="label-1">Friday</p>
+              </li>
+              <li class="card-item">
+                <div class="icon-wrapper">
+                  <img src="images/weather_icons/01n.png" alt="Overcast clouds" class="weather-icon">
+
+                  <span class="span">
+                    <p class="title-2">25</p>
+                  </span>
+                </div>
+
+                <p class="label-1">17 Feb</p>
+                <p class="label-1">Friday</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="content-right">
+        <!-- Today's Highlight section -->
+        <section class="section highlights">
+          <div class="card card-lg">
+            <h2 class="title-2" id="highlights-label">Today's Highlights</h2>
+
+            <div class="highlight-list">
+              <div class="card card-sm highlight-card one">
+                <h3 class="title-3">Air Quality Index</h3>
+                <div class="wrapper">
+                  <span class="m-icon">air</span>
+                  <ul class="card-list">
+                    <li class="card-item">
+                      <p class="title-1">23.3</p>
+                      <p class="label-1">PM<sub>2.5</sub></p>
+                    </li>
+                    <li class="card-item">
+                      <p class="title-1">23.3</p>
+                      <p class="label-1">PM<sub>2.5</sub></p>
+                    </li>
+                    <li class="card-item">
+                      <p class="title-1">23.3</p>
+                      <p class="label-1">PM<sub>2.5</sub></p>
+                    </li>
+                    <li class="card-item">
+                      <p class="title-1">23.3</p>
+                      <p class="label-1">PM<sub>2.5</sub></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hourly Forecast section -->
+        <!-- Footer Section -->
+      </div>
+    </article>
+  </main>
+</body>
 </html>
