@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/sample.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -14,6 +17,7 @@
   </div>
 
   <div class="ani"></div>
+  <div class="yellow"></div>
 
   <style>
     *{
@@ -39,9 +43,19 @@
       height:200px;
       background:red;
       animation: scale 0.5s infinite alternate;
+      opacity:0;
+      visibility: hidden;
+    }
+    .yellow{
+      width:200px;
+      height:200px;
+      background:yellow;
+      animation: scale 0.5s infinite alternate;
     }
 
 
   </style>
+
+  
 </body>
 </html>
