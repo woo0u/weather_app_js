@@ -1,3 +1,5 @@
+import { url, fetchData } from './api.js';
+
 /**
  *
  * @param {NodeList} elmts selected elements from HTML to add events
